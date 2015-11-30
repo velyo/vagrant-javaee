@@ -13,15 +13,19 @@ apt-get install -y oracle-java8-set-default
 # install ubuntu desktop
 apt-get install -y ubuntu-desktop
 
-#install eclipse mars
-cd /tmp
-wget http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-jee-mars-1-linux-gtk-x86_64.tar.gz&mirror_id=1215
-tar -zxvf /vagrant/install/eclipse-*.tar.gz /opt
-cp /vagrant/install/eclipse.desktop /usr/share/applications/
-desktop-file-install /usr/share/applications/eclipse.desktop
-ln -s /opt/eclipse/eclipse /usr/local/bin/
+mkdir /home/vagrant/project
 
 # #Install glassfish
 cd /tmp
 wget 'http://download.java.net/glassfish/4.1/release/glassfish-4.1.zip'
-unzip glassfish-4.1*zip -d /opt
+unzip glassfish-4.1*zip -d /home/vagrant/project
+rm glassfish-4.1.zip -f
+
+#install eclipse mars
+cd /tmp
+wget 'http://archive.eclipse.org/technology/epp/downloads/release/mars/M1/eclipse-jee-mars-M1-linux-gtk-x86_64.tar.gz'
+cd /home/vagrant/project
+tar -zxvf /tmp/eclipse-*.tar.gz 
+cp /vagrant/install/eclipse.desktop /usr/share/applications/
+desktop-file-install /usr/share/applications/eclipse.desktop
+ln -s /home/vagrant/project/eclipse/eclipse /usr/local/bin/
