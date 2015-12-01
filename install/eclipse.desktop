@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Eclipse
 Type=Application
-Exec=/opt/eclipse/eclipse
+Exec=/home/vagrant/eclipse/eclipse
 Terminal=false
-Icon=/opt/eclipse/icon.xpm
+Icon=/home/vagrant/eclipse/icon.xpm
 Comment=Integrated Development Environment
 NoDisplay=false
 Categories=Development;IDE;
