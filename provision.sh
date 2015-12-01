@@ -33,3 +33,5 @@ chmod -R 777 /home/vagrant/eclipse
 apt-get install -y ubuntu-desktop
 apt-get -y update
 # apt-get -y install linux-headers-generic
+
+adduser vagrant sudo
